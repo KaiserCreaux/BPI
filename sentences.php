@@ -5,7 +5,7 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>';
 echo '<response>';
 	$input = $_GET['input'];
 	if(preg_match("/[.!?]$/", $input)){
-		$sentenceOutput = $input;
+		$sentenceOutput = 1;
 		echo 'Looks good to me, but I\'m really only capable of spotting punctuation.'; 
 	} elseif($input=='') {
 		echo 'Please write a complete sentence, including punctuation.';

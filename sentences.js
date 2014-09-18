@@ -1,5 +1,4 @@
 var xmlHttp = createXmlHttpRequestObject();
-var sentenceOutput = '4';
 
 function createXmlHttpRequestObject() {
 
@@ -11,30 +10,26 @@ function createXmlHttpRequestObject() {
 		} catch (e) {
 			xmlHttp = false;
 		}
-	}else{
+	} else{
 		try{
 			xmlHttp = new XMLHttpRequest();
 		} catch (e) {
 			xmlHttp = false;
 		}
-	}
-
-	if (!xmlHttp) {
+	} if (!xmlHttp) {
 		alert("Could not create XML Object");
 	} else {
 		return xmlHttp;
 	}
 }
 
-function process() { //Initiates contact with the server
-
+function yourSentence() { //Initiates contact with the server when user creates a sentence
 
 		input = encodeURIComponent(document.getElementById("userInput").value);
 		//alert(input);
 		xmlHttp.open("GET", "sentences.php?input="+input, true);
 		xmlHttp.onreadystatechange = handleServerResponse;
 		xmlHttp.send();
-
 }
 
 function handleServerResponse () {
@@ -45,7 +40,10 @@ function handleServerResponse () {
 		xmlDocumentElement = xmlResponse.documentElement;
 		message = xmlDocumentElement.firstChild.textContent;
 		document.getElementById("underInput").innerHTML = '<span style="color:blue">' + message + '</span>';
-		document.getElementById("sentenceOutput").innerHTML = $sentenceOutput;
+		//Hack to get the user's sentence to read on the sentence output
+		if ( message == 'Looks good to me, but I\'m really only capable of spotting punctuation.'){
+			document.getElementById("sentenceOutput").innerHTML = input;
+			}
 	}
 }
 
