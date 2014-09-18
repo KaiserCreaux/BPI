@@ -28,9 +28,9 @@ function createXmlHttpRequestObject() {
 function process() {
 
 
-		food = encodeURIComponent(document.getElementById("userInput").value);
-		//alert(food);
-		xmlHttp.open("GET", "sentences.php?food="+food, true);
+		input = encodeURIComponent(document.getElementById("userInput").value);
+		//alert(input);
+		xmlHttp.open("GET", "sentences.php?input="+input, true);
 		xmlHttp.onreadystatechange = handleServerResponse;
 		xmlHttp.send();
 

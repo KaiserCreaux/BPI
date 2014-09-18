@@ -3,14 +3,14 @@ header('Content-Type: text/xml');
 echo '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>';
 
 echo '<response>';
-	$food = $_GET['food'];
-	$foodArray = array('banana', 'jerky', 'beef', 'loaf', 'ham');
-	if(in_array($food,$foodArray)){
-		echo 'We do have '.$food.'!';
-	} elseif($food=='') {
-		echo 'Enter a food you idiot';
+	$input = $_GET['input'];
+	if(preg_match("/[.!?]$/", $input)){
+		echo $input;
+	} elseif($input=='') {
+		echo 'Please write a complete sentence, including punctuation.';
 	} else {
-		echo 'Sorry punk, we dont sell no '.$food.'!';
+		echo 'Did you forget punctuation?';
 	}
 echo '</response>';
 ?>
+
