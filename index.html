@@ -8,10 +8,49 @@
 	<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css"><!--Bootstrap stylin'-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--Jquery, requested by Bootstrap-->
     <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script><!--Bootstrap workin'-->
-    <link rel="stylesheet" href="styles/stylesheets/styleLarge.css">
+    <link rel="stylesheet" href="sentences.css">
 	<link rel="icon" type="image/png" href="http://i.imgur.com/bkKieGA.png">
 </head>
-	<body>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.toddacrow.com"><img class="monogram" src="http://i.imgur.com/bkKieGA.png"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Get In Touch! <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://github.com/KaiserCreaux" target="_blank">Github</a></li>
+            <li><a href="http://twitter.com/KaiserCreaux" target="_blank">Twitter</a></li>
+            <li><a href="http://www.linkedin.com/pub/todd-crow/27/507/40b/" target="_blank">LinkedIn</a></li>
+            <li><a href="http://www.facebook.com/creaux" target="blank">Facebook</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nifty Resources <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+            <li><a href="http://www.csszengarden.com/" target="_blank">CSS Zen Garden</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.startupinstitute.com/locations/new-york">Check out SINY</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 	<div class="wrap"><h1>Thanks for checking out my sentence clicker program!</h1>
 		<div class="sentenceBox">
 			<div class="sentence first"><p>I'm doing this with Ajax.</p></div>
@@ -20,7 +59,7 @@
 			<div class="sentence fourth"><p>Try out your own sentence:</p><input type="text" id="userInput" onkeyup="process()" /><div id="underInput" class="output" /></div>
 		</div>
 		<div class="outputBox">
-			<div id="sentenceOutput" class="output" />
+			<div id="sentenceOutput" class="output"> I'm here. </div>
 		</div>
 	</div>
 	</body>

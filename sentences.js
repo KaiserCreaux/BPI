@@ -1,4 +1,5 @@
 var xmlHttp = createXmlHttpRequestObject();
+var sentenceOutput = '4';
 
 function createXmlHttpRequestObject() {
 
@@ -25,7 +26,7 @@ function createXmlHttpRequestObject() {
 	}
 }
 
-function process() {
+function process() { //Initiates contact with the server
 
 
 		input = encodeURIComponent(document.getElementById("userInput").value);
@@ -44,6 +45,7 @@ function handleServerResponse () {
 		xmlDocumentElement = xmlResponse.documentElement;
 		message = xmlDocumentElement.firstChild.textContent;
 		document.getElementById("underInput").innerHTML = '<span style="color:blue">' + message + '</span>';
+		document.getElementById("sentenceOutput").innerHTML = $sentenceOutput;
 	}
 }
 
