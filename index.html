@@ -53,10 +53,10 @@
 </nav>
 	<div class="wrap"><h1>Thanks for checking out my sentence clicker program!</h1>
 		<div class="sentenceBox">
-			<div class="sentence first"><p>I'm doing this with Ajax.</p></div>
-			<div class="sentence second"><p>Of course, I'm also using Google Fonts to make the page prettier.</p></div>
-			<div class="sentence third"><p>Responsive, too, via Bootstrap if you'd like to bust out the smart phone.<p></div>
-			<div class="sentence fourth"><p>Try out your own sentence:</p><input type="text" id="userInput" onkeyup="yourSentence()" /><div id="underInput" class="output" /></div>
+			<div class="sentence first"><p id="sentence1" onclick="click1()">I'm doing this with Ajax.</p></div>
+			<div class="sentence second"><p id="sentence2" onclick="click2()">Of course, I'm also using Google Fonts to make the page prettier.</p></div>
+			<div class="sentence third"><p id="sentence3" onclick="click3()">Responsive (via Bootstrap) if you'd like to bust out the smart phone.<p></div>
+			<div class="sentence fourth"><p id="sentence4" onclick="click4()">Try out your own sentence:</p><input type="text" id="userInput" onkeyup="yourSentence()" /><div id="underInput" class="output" /></div>
 		</div>
 		<div class="outputBox">
 			<div id="sentenceOutput" class="output"> I'm here. </div>
