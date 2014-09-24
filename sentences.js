@@ -43,14 +43,16 @@ function handleServerResponse () { //retrieves the XML and displays it
 		if ( message == 'Looks good to me, but I\'m really only capable of spotting punctuation.'){
 			input = decodeURIComponent(input);
 			document.getElementById("sentenceOutput").innerHTML = input; //We're using input so interacting with the page again auto-clears old inputs.
-			}
+		} else if ( message == 'I\'m doing this with Ajax.' || message == 'Of course, I\'m also using Google Fonts to make the page prettier.' || message == 'Responsive (via Bootstrap) if you\'d like to bust out the smart phone.' || message == 'Try out your own sentence:'){
+			document.getElementById("sentenceOutput").innerHTML = message; 
+		}
 	}
 }
 
 //For the clickable sentences
 function click(i) { //Initiates contact with the server when user clicks a sentence
 		input = i;
-		xmlHttp.open("GET", "sentences.php?input=", true);
+		xmlHttp.open("GET", "sentences.php", true);
 		xmlHttp.onreadystatechange = handleServerResponse;
 		xmlHttp.send();
 }
@@ -59,7 +61,7 @@ function click1() {
 	click(1);
 	document.getElementById("sentenceOutput").innerHTML = input;
 	}
-	
+
 function click2() {
 	click(2);
 	document.getElementById("sentenceOutput").innerHTML = input;

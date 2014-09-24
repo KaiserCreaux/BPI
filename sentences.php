@@ -10,7 +10,7 @@ echo '<response>';
 	} elseif($i==2) {
 		echo 'Of course, I\'m also using Google Fonts to make the page prettier.';
 	} elseif($i==3) {
-		echo 'Responsive (via Bootstrap) if you\'d like to bust out the smart phone.'
+		echo 'Responsive (via Bootstrap) if you\'d like to bust out the smart phone.';
 	} elseif($i==4) {
 		echo 'Try out your own sentence:';
 	} else {
